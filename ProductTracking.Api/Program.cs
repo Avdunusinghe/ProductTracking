@@ -11,8 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddCustomeDbContext(builder.Configuration);
+builder.Services.EnableCors(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
 
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
     .ConfigureContainer<ContainerBuilder>(builder =>
@@ -31,6 +34,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("CorsPolicy");
+app.UseCors();
 app.UseAuthorization();
 
 app.MapControllers();
@@ -52,6 +57,24 @@ public static class CustomerMiddleWareMethods
             });
 
 
+        });
+
+        return services;
+    }
+
+    public static IServiceCollection EnableCors(this IServiceCollection services, IConfiguration configuration)
+    {
+
+        var allowedOrigins = new List<string>();
+        var allowOrigins = configuration["AllowedOrigins"].Split(",");
+
+        services.AddCors(options =>
+        {
+            options.AddPolicy(name: "CorsPolicy",
+                      builder => builder.WithOrigins(allowOrigins)
+                      .AllowAnyMethod()
+                      .AllowAnyHeader()
+                      .AllowCredentials());
         });
 
         return services;

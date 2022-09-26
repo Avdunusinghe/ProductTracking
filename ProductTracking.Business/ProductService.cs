@@ -82,6 +82,24 @@ namespace ProductTracking.Business
 
             return products;
         }
+
+        public async Task<ProductDTO> GetProductById(long id)
+        {
+            var productData = _db.Products.Where(x => x.Id == id).FirstOrDefault();
+
+            var product = new ProductDTO()
+            {
+                Id = productData.Id,
+                Name = productData.Name,
+                Category = productData.Category,
+                Quntity = productData.Quntity,
+                Price = productData.Price,
+            };
+
+            return product;
+
+        }
+
         public async Task<ResultDTO> SaveProduct(ProductDTO model)
         {
             var response = new ResultDTO();
@@ -98,6 +116,7 @@ namespace ProductTracking.Business
                         Category = model.Category,
                         Price = model.Price,
                         Quntity = model.Quntity,
+                        IsActive = true,
                         Created = DateTime.UtcNow,
                         Updated = DateTime.UtcNow,
                     };
