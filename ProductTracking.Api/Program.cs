@@ -1,9 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using ProductTracking.Data.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddCustomeDbContext(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -23,3 +27,24 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+
+public static class CustomerMiddleWareMethods
+{
+    public static IServiceCollection AddCustomeDbContext(this IServiceCollection services, IConfiguration configuration)
+    {
+        services.AddEntityFrameworkSqlServer().AddDbContext<ProductTrackingDbContext>(options =>
+        {
+            options.UseLazyLoadingProxies().UseSqlServer(configuration["ProductTrackingDbConnectionString"], 
+            sqlServerOptionsAction: sqlOptions =>
+            {
+                sqlOptions.EnableRetryOnFailure(maxRetryCount: 10, maxRetryDelay: TimeSpan.FromSeconds(30), errorNumbersToAdd: null);
+            });
+
+
+        });
+
+        return services;
+    }
+}
