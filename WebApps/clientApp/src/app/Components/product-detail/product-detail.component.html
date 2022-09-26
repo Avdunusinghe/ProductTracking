@@ -1,0 +1,47 @@
+<h2>{{ productId === 0 ? "Add New Product" : "Update Product" }}</h2>
+<form [formGroup]="productForm" (ngSubmit)="saveProduct()">
+  <div class="row">
+    <div class="col">
+      <label>Product Name</label>
+      <input
+        type="text"
+        formControlName="name"
+        class="form-control"
+        placeholder="name"
+      />
+    </div>
+    <div class="col">
+      <label>Category</label>
+      <input
+        type="text"
+        formControlName="category"
+        class="form-control"
+        placeholder="category"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label>quntity</label>
+      <input
+        type="text"
+        formControlName="quntity"
+        class="form-control"
+        placeholder="quntity"
+      />
+    </div>
+    <div class="col">
+      <label>Price</label>
+      <input
+        type="text"
+        formControlName="price"
+        class="form-control"
+        placeholder="price"
+      />
+    </div>
+  </div>
+  <br />
+  <button type="button" class="btn btn-warning" type="submit">
+    {{ productId === 0 ? "Save" : "Update" }}
+  </button>
+</form>

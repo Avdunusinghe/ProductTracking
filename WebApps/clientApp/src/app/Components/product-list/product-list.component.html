@@ -1,0 +1,43 @@
+<table class="table">
+  <thead>
+    <button type="button" class="btn btn-success" (click)="addNewProduct()">
+      Add New
+    </button>
+    <tr>
+      <th scope="col">Actions</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Quntity</th>
+      <th scope="col">Category</th>
+      <th scope="col">price</th>
+      <th scope="col">Created Date</th>
+      <th scope="col">Update Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rowData of products">
+      <td>
+        <button
+          type="button"
+          class="btn btn-warning"
+          (click)="update(rowData.id)"
+        >
+          update
+        </button>
+        <button
+          type="button"
+          class="btn btn-danger mr"
+          (click)="deleteProduct(rowData.id)"
+          style="margin-left: 20px"
+        >
+          Delete
+        </button>
+      </td>
+      <td>{{ rowData.name }}</td>
+      <td>{{ rowData.category }}</td>
+      <td>{{ rowData.quntity }}</td>
+      <td>{{ rowData.price }}</td>
+      <td>{{ rowData.created | date }}</td>
+      <td>{{ rowData.updated | date }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -13,6 +13,7 @@ namespace ProductTracking.Business
         Task<ResultDTO> SaveProduct(ProductDTO model);
         Task<List<BasicProductDTO>> GetAllProducts();
         Task<ResultDTO> DeleteProduct(long id);
+        Task<ProductDTO> GetProductById(long id);
 
     }
 }

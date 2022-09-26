@@ -32,10 +32,18 @@ namespace ProductTracking.Api.Controllers
             return Ok(response);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public async Task<IActionResult> DeleteProduct(long id)
         {
             var response = await _productService.DeleteProduct(id);
+
+            return Ok(response);
+        }
+
+        [HttpGet("getProductById/{id:int}")]
+        public async Task<IActionResult> GetProductById(long id)
+        {
+            var response = await _productService.GetProductById(id);
 
             return Ok(response);
         }
