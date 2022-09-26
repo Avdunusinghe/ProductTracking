@@ -3,6 +3,7 @@ Update-Database -Project ProductTracking.Data -StartUp ProductTracking.Api
 
 
 Add-Migration ProductTracking00001 -Project ProductTracking.Data -StartUp ProductTracking.Api
+Add-Migration ProductTracking00002 -Project ProductTracking.Data -StartUp ProductTracking.Api
 
 
 Script-Migration ProductTracking00001 -Project ProductTracking.Data -StartUp ProductTracking.Api

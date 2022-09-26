@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ProductTracking.Business\ProductTracking.Business.csproj" />
     <ProjectReference Include="..\ProductTracking.Data\ProductTracking.Data.csproj" />
   </ItemGroup>
 

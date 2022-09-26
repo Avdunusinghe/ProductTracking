@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductTracking.Model
+namespace ProductTracking.DTO
 {
-    public class Product
+    public class BasicProductDTO
     {
         public long Id { get; set; }
         public string Name { get; set; }

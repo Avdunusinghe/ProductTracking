@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProductTracking.Data.Data;
 
@@ -11,9 +12,10 @@ using ProductTracking.Data.Data;
 namespace ProductTracking.Data.Migrations
 {
     [DbContext(typeof(ProductTrackingDbContext))]
-    partial class ProductTrackingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220926151920_ProductTracking00002")]
+    partial class ProductTracking00002
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

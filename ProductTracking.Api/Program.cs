@@ -1,4 +1,7 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using ProductTracking.Api.Infrastructure;
 using ProductTracking.Data.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +13,12 @@ builder.Services.AddControllers();
 builder.Services.AddCustomeDbContext(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+    .ConfigureContainer<ContainerBuilder>(builder =>
+    {
+        builder.RegisterModule(new ApplicationModule());
+    });
 
 var app = builder.Build();
 

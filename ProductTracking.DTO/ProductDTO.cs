@@ -4,17 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProductTracking.Model
+namespace ProductTracking.DTO
 {
-    public class Product
+    public class ProductDTO
     {
         public long Id { get; set; }
         public string Name { get; set; }
         public int Category { get; set; }
         public decimal Price { get; set; }
         public int Quntity { get; set; }
-        public bool IsActive { get; set; }
-        public DateTime Created { get; set; }
-        public DateTime Updated { get; set; }
     }
 }
