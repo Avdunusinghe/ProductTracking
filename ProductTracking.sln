@@ -3,15 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductTracking.Api", "ProductTracking.Api\ProductTracking.Api.csproj", "{4E11FF3C-2AB2-4D12-9CCA-D491200ABBB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.Api", "ProductTracking.Api\ProductTracking.Api.csproj", "{4E11FF3C-2AB2-4D12-9CCA-D491200ABBB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductTracking.Model", "ProductTracking.Model\ProductTracking.Model.csproj", "{7C681D40-0EC2-40F8-8C7F-2ACB8E8EF305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.Model", "ProductTracking.Model\ProductTracking.Model.csproj", "{7C681D40-0EC2-40F8-8C7F-2ACB8E8EF305}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductTracking.DTO", "ProductTracking.DTO\ProductTracking.DTO.csproj", "{05BBD881-FD2A-4B97-9471-0CBF32E09CC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.DTO", "ProductTracking.DTO\ProductTracking.DTO.csproj", "{05BBD881-FD2A-4B97-9471-0CBF32E09CC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductTracking.Data", "ProductTracking.Data\ProductTracking.Data.csproj", "{338F2FDF-9EBF-4228-B1D2-597DF7929DD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.Data", "ProductTracking.Data\ProductTracking.Data.csproj", "{338F2FDF-9EBF-4228-B1D2-597DF7929DD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductTracking.Business", "ProductTracking.Business\ProductTracking.Business.csproj", "{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.Business", "ProductTracking.Business\ProductTracking.Business.csproj", "{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FA7A1F9F-3E37-4F59-AF37-B55C8368FA28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1C25E952-E82C-4FFE-AD5A-F3980A4CE548}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{784C18AC-76CB-4B47-B24B-76294A89D667}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{3F255C6E-BDD1-4EE3-A6F0-9F121970E798}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D8E642E4-AB88-40EB-B2A9-ACF47E12C779}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductTracking.Application", "src\Core\ProductTracking.Application\ProductTracking.Application.csproj", "{27C8BB1F-2804-46DD-A82B-59D4C4CCAE2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductTracking.Domain", "src\Core\ProductTracking.Domain\ProductTracking.Domain.csproj", "{179486A3-6D1C-40E3-BF33-E67C10C24EE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductTracking.Infrastructure", "src\Infrastructure\ProductTracking.Infrastructure\ProductTracking.Infrastructure.csproj", "{584C1F26-3321-4A91-95B6-2A10209AD9C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductTracking.WebAPI", "src\Web\ProductTracking.WebAPI\ProductTracking.WebAPI.csproj", "{B4F95964-31BF-4393-8BD7-602C12C2EBBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +57,34 @@ Global
 		{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27C8BB1F-2804-46DD-A82B-59D4C4CCAE2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27C8BB1F-2804-46DD-A82B-59D4C4CCAE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27C8BB1F-2804-46DD-A82B-59D4C4CCAE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27C8BB1F-2804-46DD-A82B-59D4C4CCAE2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{179486A3-6D1C-40E3-BF33-E67C10C24EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{179486A3-6D1C-40E3-BF33-E67C10C24EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{179486A3-6D1C-40E3-BF33-E67C10C24EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{179486A3-6D1C-40E3-BF33-E67C10C24EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{584C1F26-3321-4A91-95B6-2A10209AD9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584C1F26-3321-4A91-95B6-2A10209AD9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584C1F26-3321-4A91-95B6-2A10209AD9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584C1F26-3321-4A91-95B6-2A10209AD9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F95964-31BF-4393-8BD7-602C12C2EBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F95964-31BF-4393-8BD7-602C12C2EBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F95964-31BF-4393-8BD7-602C12C2EBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F95964-31BF-4393-8BD7-602C12C2EBBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1C25E952-E82C-4FFE-AD5A-F3980A4CE548} = {FA7A1F9F-3E37-4F59-AF37-B55C8368FA28}
+		{784C18AC-76CB-4B47-B24B-76294A89D667} = {FA7A1F9F-3E37-4F59-AF37-B55C8368FA28}
+		{3F255C6E-BDD1-4EE3-A6F0-9F121970E798} = {FA7A1F9F-3E37-4F59-AF37-B55C8368FA28}
+		{27C8BB1F-2804-46DD-A82B-59D4C4CCAE2C} = {1C25E952-E82C-4FFE-AD5A-F3980A4CE548}
+		{179486A3-6D1C-40E3-BF33-E67C10C24EE9} = {1C25E952-E82C-4FFE-AD5A-F3980A4CE548}
+		{584C1F26-3321-4A91-95B6-2A10209AD9C7} = {784C18AC-76CB-4B47-B24B-76294A89D667}
+		{B4F95964-31BF-4393-8BD7-602C12C2EBBD} = {3F255C6E-BDD1-4EE3-A6F0-9F121970E798}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F618AA2E-AA52-46A4-B4CB-F5A472606BA8}
