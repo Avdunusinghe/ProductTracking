@@ -3,16 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.Api", "ProductTracking.Api\ProductTracking.Api.csproj", "{4E11FF3C-2AB2-4D12-9CCA-D491200ABBB4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.Model", "ProductTracking.Model\ProductTracking.Model.csproj", "{7C681D40-0EC2-40F8-8C7F-2ACB8E8EF305}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.DTO", "ProductTracking.DTO\ProductTracking.DTO.csproj", "{05BBD881-FD2A-4B97-9471-0CBF32E09CC1}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.Data", "ProductTracking.Data\ProductTracking.Data.csproj", "{338F2FDF-9EBF-4228-B1D2-597DF7929DD2}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductTracking.Business", "ProductTracking.Business\ProductTracking.Business.csproj", "{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FA7A1F9F-3E37-4F59-AF37-B55C8368FA28}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{1C25E952-E82C-4FFE-AD5A-F3980A4CE548}"
@@ -37,26 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4E11FF3C-2AB2-4D12-9CCA-D491200ABBB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4E11FF3C-2AB2-4D12-9CCA-D491200ABBB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4E11FF3C-2AB2-4D12-9CCA-D491200ABBB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4E11FF3C-2AB2-4D12-9CCA-D491200ABBB4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7C681D40-0EC2-40F8-8C7F-2ACB8E8EF305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C681D40-0EC2-40F8-8C7F-2ACB8E8EF305}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C681D40-0EC2-40F8-8C7F-2ACB8E8EF305}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C681D40-0EC2-40F8-8C7F-2ACB8E8EF305}.Release|Any CPU.Build.0 = Release|Any CPU
-		{05BBD881-FD2A-4B97-9471-0CBF32E09CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{05BBD881-FD2A-4B97-9471-0CBF32E09CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{05BBD881-FD2A-4B97-9471-0CBF32E09CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{05BBD881-FD2A-4B97-9471-0CBF32E09CC1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{338F2FDF-9EBF-4228-B1D2-597DF7929DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{338F2FDF-9EBF-4228-B1D2-597DF7929DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{338F2FDF-9EBF-4228-B1D2-597DF7929DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{338F2FDF-9EBF-4228-B1D2-597DF7929DD2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4FEC30E8-D1E3-46ED-AC20-C0A2123D24A1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{27C8BB1F-2804-46DD-A82B-59D4C4CCAE2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{27C8BB1F-2804-46DD-A82B-59D4C4CCAE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27C8BB1F-2804-46DD-A82B-59D4C4CCAE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
